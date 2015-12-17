@@ -22,7 +22,7 @@ describe('account/:name', function () {
 		done();
 	});
 
-	it('should return the name passed', function (done) {
+	it('should return the name passed in JSON format with HTTP 200 OK status', function (done) {
 		request(server.app)
 			.get('/account/john')
 			.set('Accept', 'application/json')
@@ -35,11 +35,10 @@ describe('account/:name', function () {
 			});
 	});
 
-	it('should return the name passed', function (done) {
+	it('should return HTTP 404 NOT FOUND', function (done) {
 		request(server.app)
-			.get('/account/john')
-			.set('Accept', 'application/json')
-			.expect(200)
+			.get('/account/')
+			.expect(404)
 			.end(function (err, res) {
 				if (err) return done(err);
 				done();
