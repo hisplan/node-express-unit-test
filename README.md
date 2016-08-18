@@ -1,8 +1,16 @@
 node-express-unit-test
 ======================
+
 ## Introduction
 
 Unit testing with mocha and chai for Node.js/Express web application
+
+## Runnning test
+
+```bash
+npm test
+```
+
 
 ## References
 - http://stackoverflow.com/questions/9517880/how-does-one-unit-test-routes-with-express
